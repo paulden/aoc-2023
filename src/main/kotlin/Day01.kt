@@ -21,7 +21,7 @@ private val wordsToNumber = mapOf(
     "9" to 9,
 )
 
-fun part1(input: List<String>): Int {
+fun day01Part1(input: List<String>): Int {
     var calibrationValuesSum = 0
     for (line in input) {
         val digits = line
@@ -32,7 +32,7 @@ fun part1(input: List<String>): Int {
     return calibrationValuesSum
 }
 
-fun part2(input: List<String>): Int {
+fun day01Part2(input: List<String>): Int {
     var calibrationValuesSum = 0
     for (line in input) {
         val firstDigit = wordsToNumber

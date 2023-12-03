@@ -8,4 +8,9 @@ fun main(args: Array<String>) {
     val day02Input = readInput("Day02")
     println(day02Part1(day02Input))
     println(day02Part2(day02Input))
+
+    println("=== Day 03 ===")
+    val day03Input = readInput("Day03")
+    println(day03Part1(day03Input))
+    println(day03Part2(day03Input))
 }

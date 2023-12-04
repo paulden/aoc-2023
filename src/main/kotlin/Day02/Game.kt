@@ -1,26 +1,14 @@
-private val maximumCubes = mapOf(
-    "red" to 12,
-    "green" to 13,
-    "blue" to 14
-)
-
-
-fun day02Part1(input: List<String>): Int {
-    return input
-        .map { Game(it) }
-        .filter { it.isPossible() }
-        .sumOf { it.id }
-}
-
-fun day02Part2(input: List<String>): Int {
-    return input
-        .map { Game(it) }
-        .sumOf { it.fewestCubesPower() }
-}
+package Day02
 
 class Game(record: String) {
     val id: Int
     private val sets: List<Map<String, Int>>
+
+    private val maximumCubes = mapOf(
+        "red" to 12,
+        "green" to 13,
+        "blue" to 14
+    )
 
     init {
         val (game, playedSets) = record.split(": ")

@@ -1,8 +1,5 @@
 package Day04
 
-import parseIntegers
-import kotlin.math.pow
-
 fun part1(input: List<String>): Int {
     return input
         .map { Card(it) }
@@ -14,14 +11,26 @@ fun part2(input: List<String>): Int {
         .map { Card(it) }
         .associateBy { it.id }
 
-    var newCards = cards.values.toList()
-    var totalScratchcards = newCards.count()
+    var countOfNewCards = cards.values
+        .toList()
+        .associateWith { 1 }
+    var totalScratchcards = countOfNewCards.values.sum()
 
-    while (newCards.isNotEmpty()) {
-        newCards = newCards
-            .map { it.getCardsWon(cards) }
-            .flatten()
-        totalScratchcards += newCards.count()
+    while (countOfNewCards.isNotEmpty()) {
+        val nextRound = mutableMapOf<Card, Int>()
+            .withDefault { 0 }
+
+        countOfNewCards
+            .forEach { card ->
+                val newCardsWon = card.key.getCardsWon(cards)
+                for (newCard in newCardsWon) {
+                    nextRound[newCard] = nextRound.getValue(newCard) + card.value
+                }
+            }
+
+        countOfNewCards = nextRound
+
+        totalScratchcards += countOfNewCards.values.sum()
     }
     return totalScratchcards
 }

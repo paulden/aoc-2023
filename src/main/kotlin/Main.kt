@@ -38,4 +38,9 @@ fun main(args: Array<String>) {
     val day08Input = readInput("Day08")
     println(day08.part1(day08Input))
     println(day08.part2(day08Input).toBigDecimal().toPlainString())
+
+    println("=== Day 09 ===")
+    val day09Input = readInput("Day09")
+    println(day09.part1(day09Input))
+    println(day09.part2(day09Input))
 }

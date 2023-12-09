@@ -1,4 +1,4 @@
-package Day04
+package day04
 
 import parseIntegers
 import kotlin.math.pow

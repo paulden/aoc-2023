@@ -1,4 +1,4 @@
-package Day01
+package day01
 
 private val wordsToNumber = mapOf(
     "zero" to 0,

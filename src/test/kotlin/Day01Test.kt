@@ -1,5 +1,5 @@
-import Day01.part1
-import Day01.part2
+import day01.part1
+import day01.part2
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 

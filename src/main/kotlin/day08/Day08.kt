@@ -1,4 +1,4 @@
-package Day08
+package day08
 
 fun part1(input: List<String>): Int {
     val instructions = input.first()

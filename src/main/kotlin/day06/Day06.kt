@@ -1,4 +1,4 @@
-package Day06
+package day06
 
 fun part1(input: List<String>): Int {
     val times = parseInformation(input[0])

@@ -1,4 +1,4 @@
-package Day05
+package day05
 
 class Mapper(maps : String, mapperKind: String) {
     private val kind : String

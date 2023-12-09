@@ -1,4 +1,4 @@
-package Day03
+package day03
 
 fun part1(input: List<String>): Int {
     val (engineParts: List<Part>, symbols: List<Part>) = parseEngineParts(input)

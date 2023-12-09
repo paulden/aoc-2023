@@ -1,4 +1,4 @@
-package Day07
+package day07
 
 fun part1(input: List<String>): Int {
     return input.map { Hand(it) }

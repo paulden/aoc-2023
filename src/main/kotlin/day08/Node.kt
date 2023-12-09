@@ -1,4 +1,4 @@
-package Day08
+package day08
 
 class Node(node: String) {
     val self: String

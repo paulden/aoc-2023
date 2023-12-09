@@ -1,4 +1,4 @@
-package Day07
+package day07
 
 private val headsToNumber = mapOf(
     'T' to 10,

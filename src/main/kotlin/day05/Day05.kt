@@ -1,4 +1,4 @@
-package Day05
+package day05
 
 fun part1(input: List<String>): Long {
     var seeds = input
